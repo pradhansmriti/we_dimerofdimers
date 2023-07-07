@@ -1,0 +1,17 @@
+NONBONDED 
+! 
+!V(Lennard-Jones) = Eps,i,j[(Rmin,i,j/ri,j)**12 - 2(Rmin,i,j/ri,j)**6] 
+! 
+!epsilon: kcal/mole, Eps,i,j = sqrt(eps,i * eps,j) 
+!Rmin/2: A, Rmin,i,j = Rmin/2,i + Rmin/2,j 
+! 
+!atom  ignored    epsilon      Rmin/2 
+! 
+!PCH    0.000000  -0.100000     6.800000
+!PSH    0.000000  -0.100000     6.800000
+!DOT    0.000000  -10.00000     6.800000
+!CLB    0.000000  -0.100000     7.000000
+SOD    0.000000  -0.100000     7.000000
+
+END
+
