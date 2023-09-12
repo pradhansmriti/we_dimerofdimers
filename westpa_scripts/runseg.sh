@@ -66,15 +66,27 @@ ln -sv $WEST_PARENT_DATA_REF/seg.vel  ./parent.vel
 ln -sv $WEST_PARENT_DATA_REF/seg.xsc  ./parent.xsc
 
 # Run the dynamics: Propagate the segment using namd2
-namd2 md.conf > seg.log
+/home/smriti/Downloads/NAMD_2.14_Linux-x86_64-multicore/namd2 md.conf > seg.log
 #echo $PWD
 #Calculate and return data
-python $WEST_SIM_ROOT/commonfiles/cluster.py > $WEST_PCOORD_RETURN
+#python $WEST_SIM_ROOT/commonfiles/com.py > $WEST_PCOORD_RETURN
+#COMDIST=$(mktemp)
+#echo $COMDIST
+# Use a custom python script to calculate the distance between the Na+ and Cl-
+# ions. This script looks for files named 'nacl.psf' and 'seg.dcd'.
+python $WEST_SIM_ROOT/commonfiles/com.py > comdist.dat
+#echo $COMDIST
+#NAFRAC= $(mktemp)
+#echo $NAFRAC
+python $WEST_SIM_ROOT/commonfiles/nativefraction.py > nativefrac.dat
+#echo $NAFRAC
 
+paste <(cat comdist.dat) <(cat nativefrac.dat)> $WEST_PCOORD_RETURN
+echo $WEST_PCOORD_RETURN
 #cat $WEST_PCOORD_RETURN | tail -n 20 > $pcoord_traj
 #echo $pcoord_traj > pcoord.dat 
-pcoord_traj="$(python $WEST_SIM_ROOT/commonfiles/cluster.py)"
-echo $pcoord_traj > pcoord.dat
+#pcoord_traj="$(python $WEST_SIM_ROOT/commonfiles/cluster.py)"
+#echo $pcoord_traj > pcoord.dat
 
 #Calculate pcoord with MDAnalysis
 #python $WEST_SIM_ROOT/commonfiles/dist.py > $WEST_PCOORD_RETURN

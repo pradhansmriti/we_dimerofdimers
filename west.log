@@ -1,0 +1,39 @@
+Updating system with the options from the configuration file
+Maximum wallclock time: 3 days, 18:00:00
+
+Fri Sep  8 10:01:17 2023
+Iteration 1 (2 requested)
+Beginning iteration 1
+4 segments remain in iteration 1 (4 total)
+1 of 83 (1.204819%) active bins are populated
+per-bin minimum non-zero probability:       1
+per-bin maximum probability:                1
+per-bin probability dynamic range (kT):     0
+per-segment minimum non-zero probability:   0.2
+per-segment maximum non-zero probability:   0.4
+per-segment probability dynamic range (kT): 0.693147
+norm = 1, error in norm = 0 (0*epsilon)
+Waiting for segments to complete...
+-- ERROR    [westpa.core.propagators.executable] -- could not read pcoord from '/tmp/tmpwhw1o42g': ValueError("could not convert string 'that' to float32 at row 0, column 1.")
+-- ERROR    [westpa.core.propagators.executable] -- could not read pcoord from '/tmp/tmpn0p5xt_h': ValueError("could not convert string 'that' to float32 at row 0, column 1.")
+-- ERROR    [westpa.core.propagators.executable] -- could not read pcoord from '/tmp/tmp1o_paxex': ValueError("could not convert string 'that' to float32 at row 0, column 1.")
+-- ERROR    [westpa.core.propagators.executable] -- could not read pcoord from '/tmp/tmp8hfz3356': ValueError("could not convert string 'that' to float32 at row 0, column 1.")
+-- ERROR    [westpa.core.sim_manager] -- propagation failed for 4 segment(s):
+0  
+1  
+2  
+3
+exception caught; shutting down
+-- ERROR    [w_run] -- error message: propagation failed for 4 segments
+-- ERROR    [w_run] -- Traceback (most recent call last):
+  File "/home/smriti/miniconda3/envs/westpa-2.0/lib/python3.9/site-packages/westpa/cli/core/w_run.py", line 62, in run_simulation
+    sim_manager.run()
+  File "/home/smriti/miniconda3/envs/westpa-2.0/lib/python3.9/site-packages/westpa/core/sim_manager.py", line 753, in run
+    self.check_propagation()
+  File "/home/smriti/miniconda3/envs/westpa-2.0/lib/python3.9/site-packages/westpa/core/sim_manager.py", line 650, in check_propagation
+    raise PropagationError('propagation failed for {:d} segments'.format(len(failed_segments)))
+westpa.core.sim_manager.PropagationError: propagation failed for 4 segments
+
+Exception in thread receiver:
+Traceback (most recent call last):
+  File "/home/smriti/miniconda3/envs/westpa-2.0/lib/python3.9/threading.py", line 980, in _bootstrap_inner
