@@ -1,6 +1,0 @@
-
-Inactive Modules:
-  1) openmpi3
-
-slurmstepd: error: *** JOB 9218355 ON gpu-1-1 CANCELLED AT 2023-02-11T15:11:19 ***
-/var/spool/slurm/d/job9218354/slurm_script: line 30: 9218354: command not found
