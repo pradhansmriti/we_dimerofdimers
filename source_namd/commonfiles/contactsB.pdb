@@ -1,0 +1,24 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+REMARK     original generated coordinate pdb file
+CRYST1    1.000    1.000    1.000  90.00  90.00  90.00 P 1           1
+REMARK     285 UNITARY VALUES FOR THE UNIT CELL AUTOMATICALLY SET
+REMARK     285 BY MDANALYSIS PDBWRITER BECAUSE UNIT CELL INFORMATION
+REMARK     285 WAS MISSING.
+REMARK     285 PROTEIN DATA BANK CONVENTIONS REQUIRE THAT
+REMARK     285 CRYST1 RECORD IS INCLUDED, BUT THE VALUES ON
+REMARK     285 THIS RECORD ARE MEANINGLESS.
+ATOM      1  A6  CG  P   1     106.920  88.047  29.099  1.00  0.00      P1      
+ATOM      2  A15 CG  P   1     100.618  84.690  12.059  1.00  0.00      P1      
+ATOM      3  A15 CG  P   1     100.618  84.690  12.059  1.00  0.00      P1      
+ATOM      4  A15 CG  P   1     100.618  84.690  12.059  1.00  0.00      P1      
+ATOM      5  A18 CG  P   1     100.067  87.653  21.379  1.00  0.00      P1      
+ATOM      6  A18 CG  P   1     100.067  87.653  21.379  1.00  0.00      P1      
+ATOM      7  A20 CG  P   1      95.037  99.045  -4.187  1.00  0.00      P1      
+ATOM      8  A25 CG  P   1      99.295  97.271   3.264  1.00  0.00      P1      
+ATOM      9  A28 CG  P   1      98.254  88.478   0.520  1.00  0.00      P1      
+ATOM     10  A28 CG  P   1      98.254  88.478   0.520  1.00  0.00      P1      
+ATOM     11  A28 CG  P   1      98.254  88.478   0.520  1.00  0.00      P1      
+ATOM     12  A38 CG  P   1     105.779 101.126  20.847  1.00  0.00      P1      
+ATOM     13  A46 CG  P   1     105.860 102.479   8.396  1.00  0.00      P1      
+END
